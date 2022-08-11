@@ -71,18 +71,18 @@ var (
 	// DefaultLoggerConfig is the default Logger middleware config.
 	DefaultLoggerConfig = LoggerConfig{
 		Skipper: middleware.DefaultSkipper,
-		Format: `time:${time_rfc3339}\t` +
-			`host:${remote_ip}\t` +
-			`forwardedfor:${header:x-forwarded-for}\t` +
-			`status:${status}\t` +
-			`method:${method}\t` +
-			`uri:${uri}\t` +
-			`size:${bytes_out}\t` +
-			`referer:${referer}\t` +
-			`ua:${user_agent}\t` +
-			`reqtime:${latency_sec}\t` +
-			`vhost:${host}\t` +
-			`x-request-id:${id}` +
+		Format: "time:${time_rfc3339}\t" +
+			"host:${remote_ip}\t" +
+			"forwardedfor:${header:x-forwarded-for}\t" +
+			"status:${status}\t" +
+			"method:${method}\t" +
+			"uri:${uri}\t" +
+			"size:${bytes_out}\t" +
+			"referer:${referer}\t" +
+			"ua:${user_agent}\t" +
+			"reqtime:${latency_sec}\t" +
+			"vhost:${host}\t" +
+			"x-request-id:${id}" +
 			"\n",
 		CustomTimeFormat: "2006-01-02 15:04:05.00000",
 		colorer:          color.New(),
